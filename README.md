@@ -26,7 +26,13 @@ Then, you need to install the project dependencies, which are listed in `require
 
 ```
 (venv) $ flask run
+
 ```
+OR 
+```
+(venv) $ python app.py
+```
+
 
 Open http://localhost:5000 to view it in your browser.
 

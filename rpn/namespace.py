@@ -1,8 +1,7 @@
 import operator
 import uuid
-
-from flask import Flask, request
-from flask_restplus import Api, Resource, fields, Namespace
+from flask import Flask
+from flask_restplus import Resource, fields, Namespace
 
 app = Flask(__name__)
 api = Namespace('rpn', description='RPN Api')
@@ -60,9 +59,9 @@ class StackList(Resource):
     @api.doc('Create a new stack', responses={201: 'Created'})
     def post(self):
         """Create a new stack"""
-        id = uuid.uuid1()
-        STACKS[str(id)] = []
-        return {str(id): STACKS[str(id)]}, 201
+        stack_id = str(uuid.uuid1())
+        STACKS[stack_id] = []
+        return {stack_id: STACKS[stack_id]}, 201
 
 
 @api.route('/rpn/op')
