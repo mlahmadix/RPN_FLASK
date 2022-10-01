@@ -1,0 +1,3 @@
+Flask
+Flask-restplus
+Werkzeug==0.16.1
