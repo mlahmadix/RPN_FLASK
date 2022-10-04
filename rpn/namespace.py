@@ -81,7 +81,8 @@ class ApplyOperator(Resource):
     def post(self, op, stack_id):
         """Apply an operator to a stack"""
         if op not in OPS or stack_id not in STACKS:
-            api.abort(404, message='not found, please check operator or stack_id')
+            api.abort(404,
+                      message='not found, please check operator or stack_id')
         elif len(STACKS[stack_id]) < 2:
             api.abort(400, message="stack contain less than two values")
         else:
