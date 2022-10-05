@@ -41,7 +41,7 @@ class Stack(Resource):
     @api.doc('Push a new value to a stuck', responses={200: 'Success'})
     @api.expect(stack)
     def post(self, stack_id):
-        """Push  to a stack"""
+        """Push to a stack"""
         if stack_id not in STACKS:
             api.abort(404)
         else:

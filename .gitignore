@@ -2,3 +2,4 @@ venv/*
 .idea/*
 rpn/__pycache__/*
 __pycache__/*
+tests/unit/__pycache__/*
